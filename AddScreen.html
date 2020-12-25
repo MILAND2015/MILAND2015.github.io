@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title></title>
+		<link href="css/general.css" rel="stylesheet" type="text/css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">				
+					</head>
+	<body>
+		<a id="id_308746" class="class8569" href="general.html">
+Главная
+</a>
+<header id="id_308741">
+Мемы Юургу		<img id="id_308743" height="50" src="pictures/AistovDOmaketSUSUMemeGeneralScreen_0000s_0003_logo.png" width="50">
+
+		</img>
+</header>
+<a id="id_308747" href="AddScreen.html" target="_self">
+Добавить
+</a>
+<img id="id_308749" src="pictures/AistovDOmaketSUSUMemeGeneralScreen_0001s_0000s_0007_BG.png">
+
+
+<!-- Side navigation -->
+<div class="sidenav">
+  <a href="SignJoinIn.html">Вход</a>
+  <a href="AddScreen.html">Добавить</a>
+</div>
+
+<script language="php">
+    $dir = 'im'; //папка в которой хранятся картинки
+    if(!file_exists($dir))
+        mkdir($dir);
+    echo <<<FORM
+    <form action="?" method="POST" enctype="multipart/form-data">
+    Картинка: <input type="file" name="image"><br/>
+    <input type="submit" value="Загрузить!">
+    </form>
+    FORM;
+    if(is_uploaded_file($_FILES['image']['tmp_name'])){
+        $ext = array_pop(explode(".", $_FILES['image']['name']));
+        if($ext == 'jpg' || $ext == 'gif' || $ext == 'png'){
+            if(move_uploaded_file($_FILES['image']['tmp_name'], $dir.'/'.time().rand(1,9).'.'.$ext))
+                echo "Картинка успешно загружена";
+            else
+                echo "Ошибка загрузки картинки";
+        }else{
+            echo "Это не картинка!";
+        }
+    }
+    echo '<hr>';
+    foreach(scandir($dir) as $k=>$v){
+        $ext = array_pop(explode(".", $v));
+        if($ext == 'jpg' || $ext == 'gif' || $ext == 'png'){
+            echo '<img src="'.$dir.'/'.$v.'" alt="image"><br/>';
+        }
+    }
+</script>
+    
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Загрузка файла</title>
+ </head>
+ <body>
+  <form enctype="multipart/form-data" method="post">
+   <p>Загрузите ваши фотографии на сервер</p>
+   <p><input type="file" name="photo" multiple accept="im/*,im/jpeg">
+   <input type="submit" value="Отправить"></p>
+  </form>
+ </body>
+</html>

@@ -1,0 +1,161 @@
+
+
+img {max-width: 100%;}
+body{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+#id_308741{ 
+	background-image: url("../pictures/AistovDOmaketSUSUMemeGeneralScreen_0000s_0005_bg.png"); 
+	background-position-x: center; 
+	background-position-y: center; 
+	background-size: contain; 
+	color: rgb(244, 242, 242); 
+	font-family: Arial Black; 
+	font-size: 38px; 
+	left: -8px; 
+	letter-spacing: 0px; 
+	position: relative; 
+	text-align: left; 
+	text-indent: 9px; 
+	text-transform: uppercase; 
+	top: -65px; 
+	white-space: normal; 
+	width: 100%; 
+	word-spacing: 0px; 
+    z-index: 3;
+}
+
+
+#id_308746{ 
+	bottom: 0px; 
+	color: rgb(255, 253, 253); 
+	float: none; 
+	font-family: Arial Black; 
+	font-size: 37px; 
+	left: 75%; 
+	letter-spacing: 0px; 
+	line-height: 54px; 
+	position: relative; 
+	text-align: left; 
+	text-decoration: overline; 
+	text-transform: uppercase; 
+	top: -13px; 
+	white-space: normal; 
+	z-index: 4;
+}
+
+
+#id_308747{ 
+	color: rgb(255, 255, 255); 
+	font-family: Arial Black; 
+	font-size: 35px; 
+	position: relative; 
+	right: -89%; 
+	text-decoration: overline; 
+	top: -128px; 
+    z-index: 4;
+}
+
+
+#id_308749{ 
+    position: absolute;
+    bottom: 0;
+    height: 201px;
+    width: 100%;
+    left: -0px;
+    clear: both;
+    z-index: 4;
+}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: 10px;
+    background: #0000FF;
+    overflow-x: hidden;
+    padding: 8px 0;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FFFFFF;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #064579;
+}
+
+.main {
+    margin-left: 140px; /* Same width as the sidebar + left position in px */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+</style>
+<script src="/s3/static/partners/app.js"></script></head>
+<body>
+
+
+</body>
+</html> 
+
+#gall {
+  position: relative;
+  padding-top: 50%;
+  -moz-user-select: none; user-select: none;
+}
+#gall img {
+  position: absolute;
+  top: 25%;
+  left: 12.5%;
+  max-width: 15%;
+  max-height: 15%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: zoom-in;
+  transition: .2s;
+}
+#gall img:nth-child(4n-2) {left: 37.5%;}
+#gall img:nth-child(4n-1) {left: 62.5%;}
+#gall img:nth-child(4n) {left: 87.5%;}
+#gall img:nth-child(n+5) {top: 50%;}
+
+#gall img:focus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  max-width: 50%;
+  max-height: 50%;
+  outline: none;
+  pointer-events: none;
+}
+#gall img:focus ~ div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  cursor: zoom-out;
+}
